@@ -15,7 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Genaral = Window:AddTab({ Title = "Genaral", Icon = "rbxassetid://11433532654" }),
-    Team = Window:AddTab({ Title = "Change Team", Icon = "rbxassetid://102441967601281" }),
+    Team = Window:AddTab({ Title = "Change Team", Icon = "Flags" }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "rbxassetid://11419702273" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "rbxassetid://11293977610" })
 }
@@ -647,9 +647,9 @@ SaveManager:LoadAutoloadConfig()
 --PlayerSpeed
 
 local Slider = Tabs.Settings:AddSlider("Slider", {
-    Title = "Seed",
+    Title = "Speed",
     Description = "",
-    Default = 16,
+    Default = 20,
     Min = 0,
     Max = 500,
     Rounding = 0,
@@ -670,7 +670,7 @@ local Slider = Tabs.Settings:AddSlider("Slider", {
     Title = "JumpPower",
     Description = "",
     Default = 50,
-    Min = 0,
+    Min = 15,
     Max = 500,
     Rounding = 0,
     Callback = function(Value)
