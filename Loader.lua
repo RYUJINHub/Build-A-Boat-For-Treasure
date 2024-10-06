@@ -722,7 +722,7 @@ Dropdown:OnChanged(function(Value)
 end)
 
 Tabs.Team:AddButton({
-    Title = "Click To TP",
+    Title = "Teleport",
     Description = "",
     Callback = function()
     TeleportToColor(Dropdown.Value)
@@ -772,7 +772,7 @@ ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.156000003, 0, -0, 0)
 ImageButton.Size = UDim2.new(0, 50, 0, 50)
-ImageButton.Image = "rbxassetid://12975600393"
+ImageButton.Image = "rbxassetid://120809643135531"
 ImageButton.MouseButton1Click:Connect(function()
 game.CoreGui:FindFirstChild("ScreenGui").Enabled = not game.CoreGui:FindFirstChild("ScreenGui").Enabled
 end)
