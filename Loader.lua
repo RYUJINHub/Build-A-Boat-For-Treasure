@@ -42,10 +42,10 @@ Tabs.Genaral:AddParagraph({
 
 --slider speed
 local Slider = Tabs.Genaral:AddSlider("Slider", {
-    Title = "Speed Tween(Recommend: 390)",
+    Title = "Speed Tween",
     Description = "",
     Default = 400,
-    Min = 50,
+    Min = 400,
     Max = 1000,
     Rounding = 0,
 })
