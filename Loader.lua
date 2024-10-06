@@ -1,5 +1,3 @@
---Cavehub build A Boat For Treasure
-
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -27,14 +25,14 @@ local Options = Fluent.Options
 do
     Fluent:Notify({
         Title = "Notification",
-        Content = "Cave Hub NO.1",
+        Content = "Sinestria running in Script.",
         SubContent = "", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
 end
 
 
-Tabs.Main:AddParagraph({
+Tabs.Genaral:AddParagraph({
     Title = "AutoFarm",
     Content = "🟢🟢"
 })
@@ -43,7 +41,7 @@ Tabs.Main:AddParagraph({
 --autoFarm
 
 --slider speed
-local Slider = Tabs.Main:AddSlider("Slider", {
+local Slider = Tabs.Genaral:AddSlider("Slider", {
     Title = "Speed Tween(Recommend: 390)",
     Description = "",
     Default = 400,
@@ -58,7 +56,7 @@ end)
 
 Slider:SetValue(400)
 
-local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "AutoFarm(Money)", Default = false })
+local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "AutoFarm(Money)", Default = false })
 
 Toggle:OnChanged(function(Value)
     _G.Farm = Value
@@ -139,7 +137,7 @@ Options.MyToggle:SetValue(false)
 
 
 
-local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "AutoFarm", Default = false })
+local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "AutoFarm", Default = false })
 
 Toggle:OnChanged(function(Value)
     _G.Farm2 = Value
@@ -211,7 +209,7 @@ Options.MyToggle:SetValue(false)
 
 --autoFarm Box
 
-local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "AutoFarmGold💰", Default = false })
+local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "AutoFarmGold💰", Default = false })
 
 Toggle:OnChanged(function(Value)
     _G.FarmGold = Value
@@ -270,7 +268,7 @@ Options.MyToggle:SetValue(false)
 
 --SmoothTween
 
-local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Part ฺBelow Character", Default = false })
+local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "Part ฺBelow Character", Default = false })
 
 Toggle:OnChanged(function(Value)
     do 
@@ -301,9 +299,9 @@ Options.MyToggle:SetValue(false)
 
 
 
-Tabs.Main:AddButton({
-    Title = "Reset Character(if Bug)",
-    Description = "Reset Character",
+Tabs.Genaral:AddButton({
+    Title = "Reset☠️",
+    Description = "",
     Callback = function()
         local function forceResetAction(player)
             -- Check if player and Humanoid exist
