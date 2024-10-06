@@ -328,7 +328,7 @@ Tabs.Shop:AddButton({
     Callback = function()
         Window:Dialog({
             Title = "Warning",
-            Content = "it 1500",
+            Content = "1500 Gold",
             Buttons = {
                 {
                     Title = "Confirm",
@@ -356,7 +356,7 @@ Tabs.Shop:AddButton({
     Callback = function()
         Window:Dialog({
             Title = "Warning",
-            Content = "it 2000",
+            Content = "2000 Gold",
             Buttons = {
                 {
                     Title = "Confirm",
@@ -386,7 +386,7 @@ Tabs.Shop:AddButton({
     Callback = function()
         Window:Dialog({
             Title = "Warning",
-            Content = "it 2500",
+            Content = "2500 Gold",
             Buttons = {
                 {
                     Title = "Confirm",
@@ -417,7 +417,7 @@ Tabs.Shop:AddButton({
     Callback = function()
         Window:Dialog({
             Title = "Warning",
-            Content = "it 5000",
+            Content = "5000 Gold",
             Buttons = {
                 {
                     Title = "Confirm",
@@ -448,7 +448,7 @@ Tabs.Shop:AddButton({
     Callback = function()
         Window:Dialog({
             Title = "Warning",
-            Content = "it 7500",
+            Content = "7500 Gold",
             Buttons = {
                 {
                     Title = "Confirm",
