@@ -15,6 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Genaral = Window:AddTab({ Title = "Genaral", Icon = "rbxassetid://11433532654" }),
+    Player = Window:AddTab({ Title = "Player", Icon = "human" }),
     Team = Window:AddTab({ Title = "Change Team", Icon = "flag" }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "rbxassetid://11419702273" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "rbxassetid://11293977610" })
@@ -34,7 +35,7 @@ end
 
 Tabs.Genaral:AddParagraph({
     Title = "AutoFarm",
-    Content =  ""
+    Content =  "💲💲"
 })
 
 
@@ -635,7 +636,7 @@ Window:SelectTab(1)
 
 Fluent:Notify({
     Title = "Notification",
-    Content = "The script has been loaded.",
+    Content = "The script has been loading",
     Duration = 5
 })
 
