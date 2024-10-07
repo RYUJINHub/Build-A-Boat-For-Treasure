@@ -15,7 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Genaral = Window:AddTab({ Title = "Genaral", Icon = "rbxassetid://11433532654" }),
-    Team = Window:AddTab({ Title = "Change Team", Icon = "rbxassetid://12966835146" }),
+    Team = Window:AddTab({ Title = "Change Team", Icon = "flag }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "rbxassetid://11419702273" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "rbxassetid://11293977610" })
 }
@@ -34,7 +34,7 @@ end
 
 Tabs.Genaral:AddParagraph({
     Title = "AutoFarm",
-    Content = "🟢🟢"
+    Content =  ""
 })
 
 
@@ -56,7 +56,7 @@ end)
 
 Slider:SetValue(400)
 
-local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "AutoFarm(Money)", Default = false })
+local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "AutoFarmGold [No Full Option]", Default = false })
 
 Toggle:OnChanged(function(Value)
     _G.Farm = Value
@@ -137,7 +137,7 @@ Options.MyToggle:SetValue(false)
 
 
 
-local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "AutoFarm", Default = false })
+local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "AutoFarmGold[Full Option]", Default = false })
 
 Toggle:OnChanged(function(Value)
     _G.Farm2 = Value
@@ -268,7 +268,7 @@ Options.MyToggle:SetValue(false)
 
 --SmoothTween
 
-local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "Part ฺBelow Character", Default = false })
+local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "Noclip", Default = false })
 
 Toggle:OnChanged(function(Value)
     do 
