@@ -752,22 +752,6 @@ Tabs.Team:AddButton({
 
 
 
---anti afk
-
-local Toggle = Tabs.Settings:AddToggle("MyToggle", {Title = "AntiAfk", Default = false })
-
-Toggle:OnChanged(function(Value)
-    _G.antiAFK = Value
-
-    while _G.antiAFK do wait(600)
-
-    game:GetService'VirtualUser':Button1Down(Vector2.new(788, 547))
-    
-end
-end)
-
-Options.MyToggle:SetValue(false)
-
 --uitoggle
 
 do
