@@ -497,7 +497,7 @@ Tabs.Settings:AddButton({
 
 
 Tabs.Settings:AddButton({
-    Title = "Hop To Low Server",
+    Title = "Hop Server",
     Description = "",
     Callback = function()
         local Http = game:GetService("HttpService")
