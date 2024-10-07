@@ -269,7 +269,86 @@ Options.MyToggle:SetValue(false)
 
 --SmoothTween
 
-local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "Noclip", Default = false })
+
+
+--PlayerSpeed
+
+local Slider = Tabs.Player:AddSlider("Slider", {
+    Title = "Speed",
+    Description = "",
+    Default = 20,
+    Min = 0,
+    Max = 500,
+    Rounding = 0,
+    Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end
+})
+
+Slider:OnChanged(function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end)
+
+Slider:SetValue(16)
+
+--Jump Power
+
+local Slider = Tabs.Player:AddSlider("Slider", {
+    Title = "JumpPower",
+    Description = "",
+    Default = 50,
+    Min = 15,
+    Max = 500,
+    Rounding = 0,
+    Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end
+})
+
+Slider:OnChanged(function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+end)
+
+Slider:SetValue(50)
+
+
+
+
+
+Tabs.Player:AddButton({
+    Title = "Reset☠️",
+    Description = "",
+    Callback = function()
+        local function forceResetAction(player)
+            -- Check if player and Humanoid exist
+            if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+              player.Character.Humanoid.Health = 0
+            end
+          end
+          
+          -- Example usage (call this function from another script)
+          -- Replace "game.Players.LocalPlayer" with the target player object if needed
+          forceResetAction(game.Players.LocalPlayer)
+    end
+})
+
+
+--anti afk
+
+local Toggle = Tabs.Player:AddToggle("MyToggle", {Title = "AntiAfk", Default = false })
+
+Toggle:OnChanged(function(Value)
+    _G.antiAFK = Value
+
+    while _G.antiAFK do wait(600)
+
+    game:GetService'VirtualUser':Button1Down(Vector2.new(788, 547))
+    
+end
+end)
+
+
+local Toggle = Tabs.Player:AddToggle("MyToggle", {Title = "Noclip", Default = false })
 
 Toggle:OnChanged(function(Value)
     do 
@@ -296,26 +375,6 @@ end
 end)
 
 Options.MyToggle:SetValue(false)
-
-
-
-
-Tabs.Genaral:AddButton({
-    Title = "Reset☠️",
-    Description = "",
-    Callback = function()
-        local function forceResetAction(player)
-            -- Check if player and Humanoid exist
-            if player and player.Character and player.Character:FindFirstChild("Humanoid") then
-              player.Character.Humanoid.Health = 0
-            end
-          end
-          
-          -- Example usage (call this function from another script)
-          -- Replace "game.Players.LocalPlayer" with the target player object if needed
-          forceResetAction(game.Players.LocalPlayer)
-    end
-})
 
 --Shop
 Tabs.Shop:AddParagraph({
@@ -645,45 +704,6 @@ Fluent:Notify({
 SaveManager:LoadAutoloadConfig()
 
 
---PlayerSpeed
-
-local Slider = Tabs.Settings:AddSlider("Slider", {
-    Title = "Speed",
-    Description = "",
-    Default = 20,
-    Min = 0,
-    Max = 500,
-    Rounding = 0,
-    Callback = function(Value)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-    end
-})
-
-Slider:OnChanged(function(Value)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-end)
-
-Slider:SetValue(16)
-
---Jump Power
-
-local Slider = Tabs.Settings:AddSlider("Slider", {
-    Title = "JumpPower",
-    Description = "",
-    Default = 50,
-    Min = 15,
-    Max = 500,
-    Rounding = 0,
-    Callback = function(Value)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-    end
-})
-
-Slider:OnChanged(function(Value)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-end)
-
-Slider:SetValue(50)
 
 --Team
 function TeleportToColor(color)
